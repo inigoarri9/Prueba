@@ -153,11 +153,35 @@ namespace Prueba
             Console.WriteLine("Helduentzako sarrerak: ");
             int heldu_kopurua = int.Parse(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine();
+            double sarrerak = (haur_kopurua * 15.5) + (heldu_kopurua * 20);
+
+            if (sarrerak > 100.0)
+            {
+                sarrerak = (sarrerak * 5) / 100;
+                Console.WriteLine("Guztira: {0}", sarrerak);
+            }
+            else { 
+                Console.WriteLine("Guztira: {0}", sarrerak);
+            }
+            
         }
         static void Ariketa9()
         {
+            Console.WriteLine("a zenbakia: ");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("b zenbakia: ");
+            int b = int.Parse(Console.ReadLine());
+
+            if (a > b) 
+            {
+                Console.WriteLine("True");
+            } else 
+            { 
+                Console.WriteLine("False");
+                Console.WriteLine("Handiena: {0}", a>b ? a:b);
+            }
+
 
         }
     }
