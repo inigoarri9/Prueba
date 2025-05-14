@@ -236,27 +236,114 @@ namespace Prueba
         }
         static void Ariketa9()
         {
+            Console.WriteLine("NAN zenbaki zatia: ");
+            int nanZenbakia = int.Parse(Console.ReadLine());
 
+            string letrak = "TRWAGMYFPDXBNJZSQVHLCKE";
+
+            char nanLetra = letrak[nanZenbakia % 23];
+
+            Console.WriteLine("NAN osoa: {0}{1}", nanZenbakia, nanLetra);
         }
         static void Ariketa10()
         {
+            int adina, batura = 0, kopurua = 0, nagusiak = 0;
 
+            do
+            {
+                Console.WriteLine("Ikaslearen adina: ");
+                adina = int.Parse(Console.ReadLine());
+
+                if(adina >= 0)
+                {
+                    batura += adina;
+                    kopurua++;
+                    if(adina >= 18)
+                    {
+                        nagusiak++;
+                    }
+                }
+            } while (adina >= 0);
+
+            if (kopurua > 0) 
+            {
+                Console.WriteLine("Batura: {0}", batura);
+                Console.WriteLine("Batezbestekoa: {0}", (double)batura/kopurua);
+                Console.WriteLine("Ikasle kopurua: {0}", kopurua);
+                Console.WriteLine("Nagusiak: {0}", nagusiak);
+            }
         }
         static void Ariketa11()
         {
+            int zenbaki;
 
+            do 
+            {
+                Console.WriteLine("1 eta 10 arteko zenbaki bat: ");
+                zenbaki = int.Parse(Console.ReadLine());
+                for (int i = 0; i <= 10; i++)
+                {
+                    Console.WriteLine("{0} x {1} = {2}", zenbaki, i, zenbaki * i);
+                }
+            } while (zenbaki > 1 || zenbaki < 10);
+
+            
         }
+
         static void Ariketa12()
         {
+            Console.WriteLine("Sartu zenbaki bat: ");
+            int zenbakia = int.Parse(Console.ReadLine());
+
+            int faktoriala = 1;
+
+            //WRITE-KIN DENA LERRO BERDIÑIN
+            Console.Write("{0}! = ", zenbakia);
+
+            for (int i = zenbakia; i >= 1; i--)
+            {
+                faktoriala *= i;
+                Console.Write(i);
+                if (i != 1)
+                {
+                    Console.Write("x");
+                }
+
+                
+            }
+            Console.Write(" = {0}", faktoriala);
+
 
         }
         static void Ariketa13()
         {
 
+            for (int i = 0; i<=10; i++)
+            {
+                Console.WriteLine("--- {0} biderketa taula ---", i);
+
+                for (int j = 0; j <= 10; j++)
+                {
+                    Console.WriteLine("{0} x {1} = {2}", i, j, i*j);
+                }
+            }
         }
         static void Ariketa14()
         {
+            Console.Write("Zenbaki bat sartu: ");
+            int zenbaki = int.Parse(Console.ReadLine());
 
+            int i = 0;
+
+            while (i * i <= zenbaki)  // i karratua pasatzen ez den bitartean
+            {
+                i++;
+            }
+
+            i--;  // Azkeneko alditik 1 pasatu izango delako
+
+            Console.WriteLine("Erro karratu gertukoena: {0}", i);
+            Console.WriteLine("Hondarra: {0}", zenbaki - i * i);
         }
         static void Ariketa15()
         {
