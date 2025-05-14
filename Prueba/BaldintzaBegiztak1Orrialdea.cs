@@ -194,11 +194,45 @@ namespace Prueba
         }
         static void Ariketa7()
         {
+            Console.WriteLine("Sartu zure nota: ");
+            int nota = int.Parse(Console.ReadLine());
 
+            if (nota >= 0 && nota <= 4)
+            {
+                Console.WriteLine("Gutxi");
+            }
+            else if (nota == 5) {
+                Console.WriteLine("Nahikoa");
+            }
+            else if (nota == 6)
+            {
+                Console.WriteLine("Ongi");
+            }
+            else if (nota >= 7 && nota <= 8)
+            {
+                Console.WriteLine("Oso ongi");
+            }
+            else if (nota >= 9 && nota <= 10)
+            {
+                Console.WriteLine("Bikain");
+            }
         }
         static void Ariketa8()
         {
+            Console.WriteLine("Eguna: ");
+            int eguna = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Hilabetea: ");
+            int hilabetea = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Urtea: ");
+            int urtea = int.Parse(Console.ReadLine());
+
+            DateTime data = new DateTime(urtea, hilabetea, eguna);
+
+            DateTime hurrengoa = data.AddDays(1);
+
+            Console.WriteLine("Hurrengo eguna: {0}", hurrengoa.ToString("dd/MM/yyyy"));
         }
         static void Ariketa9()
         {
