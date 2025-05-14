@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Prueba;
 
-OinarrizkoKontzeptuak.Exekutatu();
+//OinarrizkoKontzeptuak.Exekutatu();
+BaldintzaBegiztak1Orrialdea.Exekutatu();
