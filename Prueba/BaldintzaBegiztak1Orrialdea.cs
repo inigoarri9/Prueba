@@ -121,23 +121,76 @@ namespace Prueba
         }
         static void Ariketa2()
         {
+            int zenbaki;
 
+            do
+            {
+                Console.WriteLine("Asmatu zenbakia: ");
+                zenbaki = int.Parse(Console.ReadLine());
+
+            } while (zenbaki != 3);
+
+            Console.WriteLine("Asmatu duzu zenbakia! (3)");
         }
         static void Ariketa3()
         {
+            int zenbakia = 0;
 
+            while (zenbakia != 3) {
+                Console.WriteLine("Asmatu zenbakia: ");
+                zenbakia = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Asmatu duzu zenbakia! (3)");
         }
         static void Ariketa4()
         {
+            int zenbakia, kontagailua = 0;
 
+            do
+            {
+                Console.WriteLine("Asmatu zenbakia");
+                zenbakia = int.Parse(Console.ReadLine());
+                kontagailua++;
+            } while (kontagailua != 3);
+
+            Console.WriteLine("Asmatu duzu zenbakia {0} saiakeran", kontagailua);
         }
         static void Ariketa5()
         {
+            int zenbakia, kontagailua = 0, batura = 0;
 
+            do 
+            {
+                Console.WriteLine("");
+                zenbakia = int.Parse(Console.ReadLine());
+                kontagailua++;
+                batura += zenbakia;
+            } while (zenbakia != 3);
+
+            Console.WriteLine("Asmatu duzu zenbakia {0} saiakeran", kontagailua);
+            Console.WriteLine("Zenbaki guztien batura: {0}", batura);
         }
         static void Ariketa6()
         {
+            Console.WriteLine("Sartu zenbaki bat: ");
+            int zenbakia = int.Parse(Console.ReadLine());
 
+            if (zenbakia >= 0)
+            {
+                for (int i = 0; i <= zenbakia; i++)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            else if (zenbakia < 0)
+            {
+                for (int i = 0; i >= zenbakia; i--)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            else { Console.WriteLine("Sartu zenbaki bat"); }
         }
         static void Ariketa7()
         {
